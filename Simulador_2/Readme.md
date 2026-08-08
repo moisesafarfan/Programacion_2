@@ -1,29 +1,54 @@
-##Simulador2 
+# 🏦 Simulador Bancario — Simulador2
 
-Es una nueva clase que utiliza las clases que ya existíanen el proyecto para crear un escenario bancario con varios clientes,cuentas y tarjetas. No modifica el funcionamiento de las clasesoriginales; las utiliza para realizar nuevas pruebas.
+![Java](https://img.shields.io/badge/Java-POO-orange)
+![BlueJ](https://img.shields.io/badge/IDE-BlueJ-blue)
+![Estado](https://img.shields.io/badge/Estado-Completado-brightgreen)
 
--Creación del Banco Universitario-
+## 📌 Descripción
 
-Se crea un nuevo objeto de la clase Banco:
+`Simulador2` es una nueva clase que utiliza las clases que ya existían en el proyecto para crear un escenario bancario con varios clientes, cuentas y tarjetas.
 
+No modifica el funcionamiento de las clases originales; utiliza sus objetos y métodos para realizar nuevas operaciones y pruebas.
+
+---
+
+## 🏛️ Banco Universitario
+
+Se crea un nuevo objeto de la clase `Banco`:
+
+```java
 Banco objBanco = new Banco("Banco Universitario");
+```
 
-El objeto objBanco representa el banco que se utilizará durante todala simulación.
+El objeto `objBanco` representa el banco que se utilizará durante toda la simulación.
 
-Nuevos clientes
+---
 
-Se crean tres objetos de la clase Cliente:
+## 👥 Clientes
 
+Se crean tres clientes:
+
+```java
 Cliente objAna = new Cliente("Ana Lopez", "001");
 Cliente objCarlos = new Cliente("Carlos Perez", "002");
 Cliente objMaria = new Cliente("Maria Gomez", "003");
+```
 
 Cada objeto representa a un cliente diferente dentro del sistema.
 
-Nuevas cuentas bancarias
+| Cliente | Documento |
+|---|---|
+| 👩 Ana López | 001 |
+| 👨 Carlos Pérez | 002 |
+| 👩 María Gómez | 003 |
+
+---
+
+## 💰 Cuentas bancarias
 
 Se crea una cuenta para cada cliente:
 
+```java
 CuentaBancaria objCuentaAna =
     new CuentaBancaria("1001", objAna, 2000.00);
 
@@ -32,19 +57,31 @@ CuentaBancaria objCuentaCarlos =
 
 CuentaBancaria objCuentaMaria =
     new CuentaBancaria("1003", objMaria, 500.00);
+```
 
-Cada cuenta recibe su número, el objeto del cliente que será su titulary su saldo inicial.
+Cada cuenta recibe su número, el objeto `Cliente` que será su titular y el saldo inicial.
 
-Después las cuentas se registran en el banco:
+| Cuenta | Titular | Saldo inicial |
+|---|---|---:|
+| `1001` | Ana López | Q2,000.00 |
+| `1002` | Carlos Pérez | Q1,200.00 |
+| `1003` | María Gómez | Q500.00 |
 
+Después, las cuentas son registradas en el banco:
+
+```java
 objBanco.registrarCuenta(objCuentaAna);
 objBanco.registrarCuenta(objCuentaCarlos);
 objBanco.registrarCuenta(objCuentaMaria);
+```
 
-Nuevas tarjetas
+---
 
-Se crea una tarjeta para cada cuenta:
+## 💳 Tarjetas
 
+Se crea una tarjeta asociada a cada cuenta bancaria:
+
+```java
 Tarjeta objTarjetaAna =
     new Tarjeta("TAR-001", "1234", objCuentaAna);
 
@@ -53,28 +90,45 @@ Tarjeta objTarjetaCarlos =
 
 Tarjeta objTarjetaMaria =
     new Tarjeta("TAR-003", "3456", objCuentaMaria);
+```
 
-Cada tarjeta tiene un número, un PIN y queda relacionada con su cuentabancaria correspondiente.
+| Tarjeta | PIN | Cuenta |
+|---|---|---|
+| `TAR-001` | `1234` | 1001 |
+| `TAR-002` | `2345` | 1002 |
+| `TAR-003` | `3456` | 1003 |
 
-Luego se registran las tarjetas en el banco:
+Las tarjetas son registradas en el banco:
 
+```java
 objBanco.registrarTarjeta(objTarjetaAna);
 objBanco.registrarTarjeta(objTarjetaCarlos);
 objBanco.registrarTarjeta(objTarjetaMaria);
+```
 
-Uso del cajero automático
+---
 
-Se crea un nuevo cajero asociado al Banco Universitario:
+## 🏧 Cajero automático
 
+Se crea un cajero asociado al Banco Universitario:
+
+```java
 CajeroAutomatico objCajero =
     new CajeroAutomatico(objBanco);
+```
 
-A partir de este objeto se realizan las pruebas y operaciones deSimulador2.
+Este objeto se utiliza para realizar las autenticaciones y operaciones bancarias.
 
-Nuevas pruebas de autenticación
+---
 
-Primero se comprueba que no sea posible operar sin una tarjetaautenticada. Se intenta consultar el saldo y se captura el errorgenerado por el cajero:
+## 🔐 Pruebas de autenticación
 
+El programa comprueba que no sea posible realizar operaciones sin una tarjeta autenticada.
+
+<details>
+<summary>📖 Ver código de la prueba</summary>
+
+```java
 try {
     objCajero.consultarSaldo();
 }
@@ -83,73 +137,104 @@ catch (IllegalStateException e) {
         "No se puede operar sin una tarjeta autenticada."
     );
 }
+```
 
-También se prueba la tarjeta TAR-001 con un PIN incorrecto y despuéscon el PIN correcto:
+</details>
 
+También se prueba `TAR-001` primero con un PIN incorrecto y después con el PIN correcto:
+
+```java
 objCajero.autenticar("TAR-001", "9999");
 objCajero.autenticar("TAR-001", "1234");
+```
 
-Esto permite comprobar que el cajero solamente permita operar cuando laautenticación sea correcta.
+Esto permite comprobar que solamente sea posible operar cuando la autenticación sea correcta.
 
-Operaciones realizadas
+---
 
-Después de autenticar la tarjeta correspondiente, se realizan lasoperaciones solicitadas:
+## 🔄 Operaciones realizadas
 
+Las operaciones se ejecutan utilizando los métodos del cajero automático.
+
+```java
 objCajero.depositar(300.00);
 objCajero.retirar(400.00);
 objCajero.transferir("1003", 700.00);
 objCajero.retirar(1500.00);
 objCajero.transferir("1001", 250.00);
+```
 
-Las operaciones corresponden a:
+| # | Operación | Monto | Resultado |
+|---:|---|---:|---|
+| 1 | 💵 Depósito a Ana | Q300.00 | ✅ Exitoso |
+| 2 | 💸 Retiro de Carlos | Q400.00 | ✅ Exitoso |
+| 3 | 🔁 Ana → María | Q700.00 | ✅ Exitoso |
+| 4 | 💸 Retiro de María | Q1,500.00 | ❌ Rechazado |
+| 5 | 🔁 Carlos → Ana | Q250.00 | ✅ Exitoso |
 
-Depósito de Q300.00 en la cuenta de Ana.
+El retiro de **Q1,500.00 de María** es rechazado porque el saldo disponible en su cuenta es menor al monto solicitado.
 
-Retiro de Q400.00 de la cuenta de Carlos.
+---
 
-Transferencia de Q700.00 de Ana hacia María.
+## 🔄 Cambio de tarjeta
 
-Intento de retiro de Q1,500.00 de la cuenta de María.
+Para trabajar con otra cuenta primero se cierra la sesión actual:
 
-Transferencia de Q250.00 de Carlos hacia Ana.
-
-El retiro de Q1,500.00 de María no debe realizarse porque su saldodisponible es menor al monto solicitado.
-
-Cambio de tarjeta
-
-Para trabajar con otra cuenta se cierra la sesión actual:
-
+```java
 objCajero.cerrarSesion();
+```
 
 Después se autentica la tarjeta del siguiente cliente:
 
+```java
 objCajero.autenticar("TAR-002", "2345");
+```
 
-Este procedimiento permite cambiar de usuario sin modificar directamentelas cuentas.
+De esta manera se puede cambiar de usuario sin modificar directamente las cuentas bancarias.
 
-Saldos finales
+---
 
-Al finalizar todas las operaciones, los saldos esperados son:
+# 🧪 Evidencias de pruebas
 
-Ana López: Q1,850.00
-
-Carlos Pérez: Q550.00
-
-María Gómez: Q1,200.00
-
-Todos los cambios de saldo se realizan mediante los métodos del cajero ylas clases de transacción existentes. En ningún momento se modificadirectamente el saldo de una cuenta.
-
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-## Pruebas realizadas
-
-### Prueba 1
+## 📷 Prueba 1
 
 ![Prueba 1](pruebas/Prueba-1.png)
 
-### Prueba 2
+---
+
+## 📷 Prueba 2
 
 ![Prueba 2](pruebas/Prueba-2.png)
 
-### Prueba 3
+---
+
+## 📷 Prueba 3
 
 ![Prueba 3](pruebas/Prueba-3.png)
+
+---
+
+## 📊 Saldos finales
+
+Después de ejecutar todas las operaciones:
+
+| Cliente | Saldo inicial | Saldo final |
+|---|---:|---:|
+| 👩 Ana López | Q2,000.00 | **Q1,850.00** |
+| 👨 Carlos Pérez | Q1,200.00 | **Q550.00** |
+| 👩 María Gómez | Q500.00 | **Q1,200.00** |
+
+### ✅ Resultado
+
+Los cambios de saldo se realizan mediante los métodos del cajero y las clases de transacción existentes.
+
+**En ningún momento se modifica directamente el saldo de una cuenta.**
+
+---
+
+### 🛠️ Tecnologías utilizadas
+
+- ☕ Java
+- 🔵 BlueJ
+- 🧩 Programación Orientada a Objetos
+- 🌿 GitHub
