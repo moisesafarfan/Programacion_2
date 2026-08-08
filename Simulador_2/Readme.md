@@ -1,6 +1,8 @@
-Simulador2 es una nueva clase que utiliza las clases que ya existíanen el proyecto para crear un escenario bancario con varios clientes,cuentas y tarjetas. No modifica el funcionamiento de las clasesoriginales; las utiliza para realizar nuevas pruebas.
+##Simulador2 
 
-Creación del Banco Universitario
+Es una nueva clase que utiliza las clases que ya existíanen el proyecto para crear un escenario bancario con varios clientes,cuentas y tarjetas. No modifica el funcionamiento de las clasesoriginales; las utiliza para realizar nuevas pruebas.
+
+-Creación del Banco Universitario-
 
 Se crea un nuevo objeto de la clase Banco:
 
@@ -136,3 +138,18 @@ Carlos Pérez: Q550.00
 María Gómez: Q1,200.00
 
 Todos los cambios de saldo se realizan mediante los métodos del cajero ylas clases de transacción existentes. En ningún momento se modificadirectamente el saldo de una cuenta.
+
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+## Pruebas realizadas
+
+### Prueba 1
+
+![Prueba 1](pruebas/Prueba-1.png)
+
+### Prueba 2
+
+![Prueba 2](pruebas/Prueba-2.png)
+
+### Prueba 3
+
+![Prueba 3](pruebas/Prueba-3.png)
