@@ -1,0 +1,11 @@
+=== CARRITO ===
+Teclado x 2 = Q700.0
+Mouse x 1 = Q150.0
+Total: Q850.0
+Factura generada correctamente.
+=== FACTURA ===
+Numero: 9001
+Fecha: 29/08/2026
+Cliente: Cliente Demo
+Pedido: 1001
+Total: Q850.0
