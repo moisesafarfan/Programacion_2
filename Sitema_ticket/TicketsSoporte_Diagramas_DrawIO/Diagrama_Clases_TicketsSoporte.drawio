@@ -1,0 +1,60 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Diagrama de Clases" id="0">
+    <mxGraphModel page="1" pageWidth="1200" pageHeight="1100" grid="1">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="p" value="«abstract» Persona ---------------- - strId : string - strNombre : string - strCorreo : string ---------------- + mostrarInformacion() : void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="40" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="t" value="Tecnico ---------------- - strEspecialidad : string - intNivel : int ---------------- + mostrarInformacion() : void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="120" y="300" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="s" value="Solicitante ---------------- - strDepartamento : string - strExtension : string ---------------- + mostrarInformacion() : void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="760" y="300" width="260" height="170" as="geometry" />
+        </mxCell>
+        <mxCell id="tk" value="Ticket ---------------- - intNumero : int - strTitulo : string - strDescripcion : string - strCategoria : string - strPrioridad : string - strEstado : string ---------------- + registrarError() + resolver() + cerrar() + mostrarResumen() + mostrarBitacora()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="420" y="520" width="300" height="260" as="geometry" />
+        </mxCell>
+        <mxCell id="g" value="GestorTickets ---------------- + lstTecnicos : List&lt;Tecnico&gt; + lstSolicitantes : List&lt;Solicitante&gt; + lstTickets : List&lt;Ticket&gt; ---------------- + crearTicket() + buscarTicket() + mostrarTickets() + generarResumenControl()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="50" y="560" width="300" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="f" value="FlujoTicket ---------------- + puedeCambiarEstado() : bool + mostrarFlujo() : void + escalarTicket() : void" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="800" y="580" width="280" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="b" value="Bitacora ---------------- - lstEventos : List&lt;string&gt; ---------------- + registrarEvento() + mostrarBitacora()" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+          <mxGeometry x="430" y="850" width="300" height="160" as="geometry" />
+        </mxCell>
+        <mxCell id="h1" value="" style="endArrow=block;endFill=0;html=1;" edge="1" parent="1" source="t" target="p">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="h2" value="" style="endArrow=block;endFill=0;html=1;" edge="1" parent="1" source="s" target="p">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r1" value="administra 0..*" style="endArrow=open;html=1;" edge="1" parent="1" source="g" target="tk">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r2" value="asignado a 0..1" style="endArrow=open;html=1;" edge="1" parent="1" source="tk" target="t">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r3" value="creado por 1" style="endArrow=open;html=1;" edge="1" parent="1" source="tk" target="s">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r4" value="usa flujo" style="endArrow=open;html=1;" edge="1" parent="1" source="tk" target="f">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="r5" value="contiene" style="endArrow=diamond;endFill=1;html=1;" edge="1" parent="1" source="tk" target="b">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="B8r2J6AgUjPuPs8WZ5X6" name="Página-2">
+    <mxGraphModel dx="1099" dy="476" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

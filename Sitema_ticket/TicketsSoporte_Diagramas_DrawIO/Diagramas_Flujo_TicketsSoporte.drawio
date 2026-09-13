@@ -1,0 +1,67 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="01 Flujo general" id="0">
+    <mxGraphModel dx="1293" dy="560" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1200" pageHeight="900" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="s" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Inicio" vertex="1">
+          <mxGeometry height="50" width="140" x="500" y="30" as="geometry" />
+        </mxCell>
+        <mxCell id="m" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Mostrar menú principal" vertex="1">
+          <mxGeometry height="60" width="240" x="450" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="o" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="Seleccionar opción" vertex="1">
+          <mxGeometry height="60" width="200" x="470" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="a" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Ver usuarios / flujo" vertex="1">
+          <mxGeometry height="60" width="210" x="100" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="b" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Crear ticket" vertex="1">
+          <mxGeometry height="60" width="180" x="350" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="c" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Gestionar ticket" vertex="1">
+          <mxGeometry height="60" width="200" x="580" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="d" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Generar métricas" vertex="1">
+          <mxGeometry height="60" width="200" x="830" y="330" as="geometry" />
+        </mxCell>
+        <mxCell id="x" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Salir" vertex="1">
+          <mxGeometry height="50" width="140" x="500" y="520" as="geometry" />
+        </mxCell>
+        <mxCell id="e1" edge="1" parent="1" source="s" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="m" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e2" edge="1" parent="1" source="m" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="o" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e3" edge="1" parent="1" source="o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="a" value="1-2">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e4" edge="1" parent="1" source="o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="b" value="3">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e5" edge="1" parent="1" source="o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="c" value="4-7">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e6" edge="1" parent="1" source="o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="d" value="8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e7" edge="1" parent="1" source="o" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="x" value="9">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e8" edge="1" parent="1" source="a" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="m" value="Volver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e9" edge="1" parent="1" source="b" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="m" value="Volver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e10" edge="1" parent="1" source="c" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="m" value="Volver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="e11" edge="1" parent="1" source="d" style="edgeStyle=orthogonalEdgeStyle;rounded=0;html=1;endArrow=block;" target="m" value="Volver">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
