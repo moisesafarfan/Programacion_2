@@ -190,7 +190,7 @@ Entre los principales casos de uso se encuentran:
 
 ### Evidencia de caso de uso
 
-![Diagrama general de casos de uso](Evidencia/Caso_de_Uso/Sistema-Control-clinico.PNG)
+![Diagrama general de casos de uso](Evidencia/Caso_de_Uso/Sistema-control-clinico.PNG)
 
 ---
 
