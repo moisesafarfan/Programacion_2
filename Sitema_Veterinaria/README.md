@@ -236,17 +236,18 @@ Durante las pruebas se tomaron capturas para demostrar el funcionamiento de las 
 
 ## Videos explicativos
 
-### Video 1 - Lógica y creación del proyecto
 
-En este video se explica cómo se analizó el problema, cómo se identificaron las clases y cómo se aplicaron los conceptos de Programación Orientada a Objetos.
+### 🎥 Video 1 - Lógica y creación del proyecto
 
-[![Ver video 1](https://img.youtube.com/vi/w4X_qkPQ_Xw/maxresdefault.jpg)](https://youtu.be/w4X_qkPQ_Xw)
+En este video explico cómo analicé el problema, cómo identifiqué las clases y cómo desarrollé la lógica del sistema.
 
-### Video 2 - Demostración del sistema
+👉 **[▶ CLICK ACÁ PARA REPRODUCIR EL VIDEO](https://youtu.be/w4X_qkPQ_Xw)**
 
-En este video se muestra el funcionamiento del programa mediante una demostración del flujo principal.
+### 🎥 Video 2 - Demostración del sistema
 
-[![Ver video 2](https://img.youtube.com/vi/ME0TAMpPsLU/maxresdefault.jpg)](https://youtu.be/ME0TAMpPsLU)
+En este video muestro el funcionamiento del programa y el flujo principal del sistema.
+
+👉 **[▶ CLICK ACÁ PARA REPRODUCIR EL VIDEO](https://youtu.be/ME0TAMpPsLU)**
 
 ---
 
