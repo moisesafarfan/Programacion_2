@@ -4,17 +4,16 @@ Proyecto desarrollado en **C#** como parte del curso de Programación 2.
 
 El objetivo del proyecto es representar de forma sencilla y lógica el funcionamiento básico de una clínica veterinaria, utilizando conceptos de **Programación Orientada a Objetos (POO)** como clases, objetos, constructores, herencia, encapsulamiento, polimorfismo, métodos, propiedades, listas y relaciones entre objetos.
 
-Repositorio: [Programacion_2](https://github.com/moisesafarfan/Programacion_2)
 
 ---
 
 ## Navegación rápida
 
-- [Código del proyecto en C#](./Sitema_Veterinaria/Codigo-logica/)
-- [Diagramas de casos de uso](./Sitema_Veterinaria/Diagramas/Casos_de_uso/)
-- [Diagramas de flujo](./Sitema_Veterinaria/Diagramas/Diagramas_de_flujo/)
-- [Diagrama de clases en BlueJ](./Sitema_Veterinaria/Diagramas/Diagrama_de_clases_BlueJ/)
-- [Evidencias del proyecto](./Sitema_Veterinaria/Evidencia/)
+- [Código del proyecto en C#](Codigo-logica/)
+- [Diagramas de casos de uso](Diagramas/Casos_de_uso/)
+- [Diagramas de flujo](Diagramas/Diagramas_de_flujo/)
+- [Diagrama de clases en BlueJ](Diagramas/Diagrama_de_clases_BlueJ/)
+- [Evidencias del proyecto](Evidencia/)
 
 ---
 
@@ -54,7 +53,7 @@ El desarrollo del proyecto siguió de forma general el siguiente proceso:
 
 ## Organización del sistema
 
-El programa se organizó en tres áreas principales para representar mejor las responsabilidades dentro de una veterinaria:
+El programa se organizó en tres áreas principales para representar mejor las responsabilidades dentro de una veterinaria.
 
 ### Recepción
 
@@ -116,7 +115,7 @@ Cada entidad principal del sistema se representa mediante una clase. Cuando el p
 
 Por ejemplo, `Mascota` es una clase y una mascota registrada en el sistema es un objeto de esa clase.
 
-[Ver código de las clases](./Sitema_Veterinaria/Codigo-logica/)
+[Ver código de las clases](Codigo-logica/)
 
 ### Constructores
 
@@ -154,8 +153,6 @@ Ejemplos:
 
 Las clases también se relacionan entre sí.
 
-Algunos ejemplos son:
-
 ```text
 Propietario 1 -------- 0..* Mascota
 Mascota 1 ------------ 1 HistorialClinico
@@ -168,9 +165,7 @@ Consulta 1 ----------- 1 Factura
 Factura 1 ------------ 0..1 Pago
 ```
 
-Estas relaciones pueden consultarse con más detalle en el diagrama de clases.
-
-[Ver diagrama de clases en BlueJ](./Sitema_Veterinaria/Diagramas/Diagrama_de_clases_BlueJ/)
+[Ver diagrama de clases en BlueJ](Diagramas/Diagrama_de_clases_BlueJ/)
 
 ---
 
@@ -191,11 +186,11 @@ Entre los principales casos de uso se encuentran:
 - Consultar facturas.
 - Registrar pago.
 
-[Ver diagramas de casos de uso](./Sitema_Veterinaria/Diagramas/Casos_de_uso/)
+[Ver diagramas de casos de uso](Diagramas/Casos_de_uso/)
 
-### Evidencia
+### Evidencia de caso de uso
 
-![Diagrama general de casos de uso](./Sitema_Veterinaria/Evidencia/Caso_de_Uso/Sistema-Control-clinico.PNG)
+![Diagrama general de casos de uso](Evidencia/Caso_de_Uso/Sistema-Control-clinico.PNG)
 
 ---
 
@@ -203,20 +198,13 @@ Entre los principales casos de uso se encuentran:
 
 Los diagramas de flujo muestran el orden lógico de los procesos principales del sistema, incluyendo decisiones, validaciones y resultados.
 
-Se documentaron procesos como:
+Se documentaron procesos como registro de propietario, registro de mascota, registro de veterinario, agenda de citas, consultas, recetas, historial clínico, facturas y pagos.
 
-- Registro de propietario.
-- Registro de mascota.
-- Registro de veterinario.
-- Agenda de citas.
-- Consulta de citas.
-- Realización de consulta.
-- Generación de receta.
-- Consulta de historial clínico.
-- Consulta de facturas.
-- Registro de pago.
+[Ver diagramas de flujo](Diagramas/Diagramas_de_flujo/)
 
-[Ver diagramas de flujo](./Sitema_Veterinaria/Diagramas/Diagramas_de_flujo/)
+### Evidencia de diagrama de flujo
+
+![Diagrama de flujo - Registro de propietario](Evidencia/Diagrama_flujo/Registro_propietario.PNG)
 
 ---
 
@@ -226,7 +214,7 @@ El diagrama de clases representa la estructura del sistema, incluyendo clases, a
 
 El entregable correspondiente fue preparado para **BlueJ**.
 
-[Ver proyecto del diagrama de clases en BlueJ](./Sitema_Veterinaria/Diagramas/Diagrama_de_clases_BlueJ/)
+[Ver proyecto del diagrama de clases en BlueJ](Diagramas/Diagrama_de_clases_BlueJ/)
 
 ---
 
@@ -234,31 +222,23 @@ El entregable correspondiente fue preparado para **BlueJ**.
 
 Durante las pruebas se tomaron capturas para demostrar el funcionamiento de las diferentes partes del sistema.
 
-[Ver todas las evidencias](./Sitema_Veterinaria/Evidencia/Programa/)
+[Ver todas las evidencias del programa](Evidencia/Programa/)
 
 ### Ejemplo: consulta del veterinario
 
-![Consulta del veterinario](./Sitema_Veterinaria/Evidencia/Programa/Consulta_veterinario.PNG)
+![Consulta del veterinario](Evidencia/Programa/Consulta_veterinario.PNG)
 
-También existen evidencias de:
+### Ejemplo: historial clínico
 
-- Historial clínico.
-- Citas registradas.
-- Facturas.
-- Pagos.
-- Veterinarios disponibles.
-- Diagramas.
-- BlueJ.
+![Historial clínico](Evidencia/Programa/Historial_clinico.PNG)
 
 ---
 
 ## Videos explicativos
 
-El proyecto cuenta con dos videos.
+### Video 1 - Lógica y creación del proyecto
 
-### Video 1 - Explicación de la lógica y creación del proyecto
-
-En este video se explica cómo se analizó el problema, cómo se identificaron las clases y cómo se aplicaron conceptos de Programación Orientada a Objetos.
+En este video se explica cómo se analizó el problema, cómo se identificaron las clases y cómo se aplicaron los conceptos de Programación Orientada a Objetos.
 
 [Ver video de explicación en YouTube](https://youtu.be/w4X_qkPQ_Xw)
 
@@ -314,19 +294,6 @@ dotnet run
 Sitema_Veterinaria/
 │
 ├── Codigo-logica/
-│   ├── Program.cs
-│   ├── Persona.cs
-│   ├── Propietario.cs
-│   ├── Mascota.cs
-│   ├── Veterinario.cs
-│   ├── Cita.cs
-│   ├── Consulta.cs
-│   ├── HistorialClinico.cs
-│   ├── Receta.cs
-│   ├── Medicamento.cs
-│   ├── Factura.cs
-│   ├── Pago.cs
-│   └── ControlVeterinario.csproj
 │
 ├── Diagramas/
 │   ├── Casos_de_uso/
