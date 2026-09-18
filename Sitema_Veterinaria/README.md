@@ -240,13 +240,13 @@ Durante las pruebas se tomaron capturas para demostrar el funcionamiento de las 
 
 En este video se explica cómo se analizó el problema, cómo se identificaron las clases y cómo se aplicaron los conceptos de Programación Orientada a Objetos.
 
-[Ver video de explicación en YouTube](https://youtu.be/w4X_qkPQ_Xw)
+[![Ver video 1](https://img.youtube.com/vi/w4X_qkPQ_Xw/maxresdefault.jpg)](https://youtu.be/w4X_qkPQ_Xw)
 
 ### Video 2 - Demostración del sistema
 
 En este video se muestra el funcionamiento del programa mediante una demostración del flujo principal.
 
-[Ver demostración en YouTube](https://youtu.be/ME0TAMpPsLU)
+[![Ver video 2](https://img.youtube.com/vi/ME0TAMpPsLU/maxresdefault.jpg)](https://youtu.be/ME0TAMpPsLU)
 
 ---
 
