@@ -1,118 +1,137 @@
-# Sistema de Préstamos de Biblioteca
+# QEMU image namings
+### This table shows correct foldername for QEMU images used under EVE. As well right qcow image filename.
 
-Proyecto de consola desarrollado en **C#** con persistencia en **SQLite**.
+Qemu image location is /opt/unetlab/addons/qemu/
 
-El sistema administra lectores, libros y préstamos. La base de datos se crea automáticamente la primera vez que se ejecuta el programa.
+Be sure that your image folder name starts as per table, after the “-” you are adding name and version of your image:
 
-## Funcionalidades
+**Foldername examples:**
 
-### Lectores
-- Crear lector.
-- Listar lectores.
-- Actualizar lector.
-- Eliminar lector.
+firepower6-FTD-6.2.1
 
-### Libros
-- Crear libro.
-- Listar libros.
-- Actualizar libro.
-- Eliminar libro.
-- Mostrar la cantidad de ejemplares disponibles.
+acs-5.8.1.4
 
-### Préstamos
-- Registrar préstamo.
-- Listar préstamos.
-- Actualizar préstamo.
-- Registrar devolución.
-- Eliminar préstamo.
-- Mostrar el estado: `Prestado`, `Vencido` o `Devuelto`.
-- Evitar préstamos cuando no hay ejemplares disponibles.
+Inside of image folder must be placed HDD image with correct name like:
 
-### Programación orientada a objetos
-- Clase base `Persona`.
-- Clase derivada `Lector`.
-- Herencia.
-- Sobrescritura de `ObtenerInformacion()`.
-- Demostración de polimorfismo desde el menú.
-- Encapsulamiento mediante propiedades.
-- Manejo de excepciones con `try-catch`.
+hda.qcow2 or virtioa.qcow2
 
-## Estructura
+**Example:** opt/unetlab/addons/qemu/acs-5.8.1.4/hda.qcow2
+ 
+### Supported HDD formats in the EVE.
 
-```text
-PrestamosBiblioteca/
-├── Aplicacion/
-│   └── MenuBiblioteca.cs
-├── BaseDatos/
-│   └── Crear_Tablas.sql
-├── Dominio/
-│   ├── Persona.cs
-│   ├── Lector.cs
-│   ├── Libro.cs
-│   └── Prestamo.cs
-├── Persistencia/
-│   ├── InicializadorBaseDatos.cs
-│   └── RepositorioBiblioteca.cs
-├── Documentacion/
-│   └── Pruebas.md
-├── Program.cs
-├── PrestamosBiblioteca.csproj
-├── PrestamosBiblioteca.sln
-└── README.md
-```
 
-## Requisitos
+| HDD format              | Example        |
+| ----------------------- | -------------- |
+| lsi(\[a-z\]+).qcow2     | lsia.qcow2     |
+| hd(\[a-z\]+).qcow2      | hda.qcow2      |
+| virtide(\[a-z\]+).qcow2 | virtidea.qcow2 |
+| virtio(\[a-z\]+).qcow2  | virtioa.qcow2  |
+| scsi(\[a-z\]+).qcow2    | scsia.qcow2    |
+| sata(\[a-z\]+).qcow2    | sataa.qcow2    |
+| megasas(\[a-z\]+).qcow2 | megasasa.qcow  |
 
-- .NET 8 SDK.
-- Visual Studio 2022, Visual Studio Code o cualquier editor compatible con .NET.
-- Conexión a Internet la primera vez para restaurar el paquete `Microsoft.Data.Sqlite`.
+`Note: If your image have more than one HDD, then HDD’s name last letter will change in alphabetic sequence: hda, hdb, hdc…., virtioa, virtiob,virtioc…`
 
-## Ejecutar con Visual Studio
+| Qemu folder name | Vendor                                 | Qemu image .qcow2 name                                                                                                                                                                                                       |
+| -------------------- | -------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+|  |
+| a10-                 | A10-vthunder                           | hda                                                                                                                                                                                                                          |
+| acs-                 | ACS                                    | hda                                                                                                                                                                                                                          |
+| asa-                 | ASA ported                             | hda                                                                                                                                                                                                                          |
+| asav-                | ASAv                                   | virtioa                                                                                                                                                                                                                      |
+| ampcloud-            | Ampcloud Private                       | hda, hdb, hdc                                                                                                                                                                                                                |
+| alteon-              | Radware                                | virtioa                                                                                                                                                                                                                      |
+| barracuda-           | Barracuda FW                           | hda                                                                                                                                                                                                                          |
+| bigip-               | F5                                     | virtioa, virtiob                                                                                                                                                                                                             |
+| brocadevadx-         | Brocade                                | virtioa                                                                                                                                                                                                                      |
+| cda-                 | Cisco CDA                              | hda                                                                                                                                                                                                                          |
+| cips-                | Cisco IPS                              | hda, hdb                                                                                                                                                                                                                     |
+| clearpass-           | Aruba ClearPass                        | hda, hdb                                                                                                                                                                                                                     |
+| aruba-               | Aruba Virtual Mobility Controller      | hda, hdb                                                                                                                                                                                                                     |
+| arubacx-             | Aruba CX Switch                        | virtioa                                                                                                                                                                                                                      |
+| coeus-               | Cisco WSA coeus                        | virtioa                                                                                                                                                                                                                      |
+| phoebe-              | Cisco ESA                              | virtioa                                                                                                                                                                                                                      |
+| cpsg-                | Checkpoint                             | hda                                                                                                                                                                                                                          |
+| csr1000v-            | Cisco CSR v1000 3.x<br>                | virtioa                                                                                                                                                                                                                      |
+| csr1000vng-          | Cisco CSR v1000 16.x, 17.x<br>         | virtioa                                                                                                                                                                                                                      |
+| csr1000vng-          | Cisco CSR v1000 16.x SD-WAN<br>        | virtioa                                                                                                                                                                                                                      |
+| prime-               | Cisco Prime Infra                      | virtioa                                                                                                                                                                                                                      |
+| cucm-                | Cisco CUCM                             | virtioa                                                                                                                                                                                                                      |
+| cumulus-             | Cumulus                                | virtioa                                                                                                                                                                                                                      |
+| extremexos-          | ExtremeOS                              | sataa                                                                                                                                                                                                                        |
+| esxi-                | VM Ware ESXi                           | hda, hdb, hdc…                                                                                                                                                                                                               |
+| firepower-           | Cisco FirePower 5.4 NGIPS              | scsia                                                                                                                                                                                                                        |
+| firepower-           | Cisco FirePower 5.4 FMC                | scsia                                                                                                                                                                                                                        |
+| firepower6-          | Cisco FirePower 6.x NGIPS              | sataa                                                                                                                                                                                                                        |
+| firepower6-          | Cisco FirePower 6.x FMC                | virtioa                                                                                                                                                                                                                      |
+| firepower6-          | Cisco FirePower 6.x FTD                | virtioa                                                                                                                                                                                                                      |
+| fortinet-            | Fortinet FW                            | virtioa                                                                                                                                                                                                                      |
+| fortinet-            | Fortinet SGT                           | virtioa                                                                                                                                                                                                                      |
+| fortinet-            | Fortinet mail                          | virtioa, virtiob                                                                                                                                                                                                             |
+| fortinet-            | Fortinet manager                       | virtioa                                                                                                                                                                                                                      |
+| hpvsr-               | HP virt router                         | hda                                                                                                                                                                                                                          |
+| huaweiar1k-          | Huawei AR1000v                         | virtioa                                                                                                                                                                                                                      |
+| huaweiusg6kv-        | Huawei USG6000v                        | hda                                                                                                                                                                                                                          |
+| ise-                 | ISE 1.x cisco                          | hda                                                                                                                                                                                                                          |
+| ise-                 | ISE 2.x cisco                          | virtioa                                                                                                                                                                                                                      |
+| jspace-              | Junos Space                            | virtioa                                                                                                                                                                                                                      |
+| infoblox-            | Infoblox                               | virtioa                                                                                                                                                                                                                      |
+| junipervrr-          | Juniper vRR                            | virtioa                                                                                                                                                                                                                      |
+| kerio-               | Kerio Control Firewall                 | sataa                                                                                                                                                                                                                        |
+| linux-               | any linux                              | virtioa                                                                                                                                                                                                                      |
+| mikrotik-            | Mikrotik router                        | hda                                                                                                                                                                                                                          |
+| nsvpx-               | Citrix Netscaler                       | virtioa                                                                                                                                                                                                                      |
+| nsx-                 | VM Ware NSX                            | hda                                                                                                                                                                                                                          |
+| nxosv9k-             | NX9K Cisco Nexus ( SATA best perf)<br> | sataa                                                                                                                                                                                                                        |
+| olive-               | Juniper                                | hda                                                                                                                                                                                                                          |
+| ostinato-            | Ostinato traffic generator             | hda                                                                                                                                                                                                                          |
+| osx-                 | Apple OSX                              | hda + kernel.img                                                                                                                                                                                                             |
+| paloalto-            | PaloAlto FW                            | virtioa                                                                                                                                                                                                                      |
+| panorama-            | PaloAlto Panorama                      | virtioa, virtiob                                                                                                                                                                                                             |
+| pfsense-             | pFsense FW                             | virtioa                                                                                                                                                                                                                      |
+| prime-               | Cisco Prime Infra                      | virtioa                                                                                                                                                                                                                      |
+| pulse-               | Pulse Secure                           | virtioa                                                                                                                                                                                                                      |
+| riverbed-            | vRiverbed                              | virtioa, virtiob                                                                                                                                                                                                             |
+| scrutinizer-         | Plixer Scrutinizer Netflow             | virtioa                                                                                                                                                                                                                      |
+| silveredge-          | Silver Peak Edge                       | hda                                                                                                                                                                                                                          |
+| silverorch-          | Silver Peak Orchestrator               | hda                                                                                                                                                                                                                          |
+| sonicwall-           | FW Sonicwall                           | sataa                                                                                                                                                                                                                        |
+| sourcefire-          | Sourcefire NGIPS                       | scsia                                                                                                                                                                                                                        |
+| sterra-              | S-terra VPN                            | hda                                                                                                                                                                                                                          |
+| sterra-              | S-terra Gate                           | virtioa                                                                                                                                                                                                                      |
+| stealth-             | Cisco StealthWatch                     | hda                                                                                                                                                                                                                          |
+| timos-               | Alcatel Lucent Timos                   | hda                                                                                                                                                                                                                          |
+| timoscpm-            | Nokia Timos 19                         | virtidea                                                                                                                                                                                                                     |
+| timosiom-            | Nokia Timos 19                         | virtidea                                                                                                                                                                                                                     |
+| titanium-            | NXOS Titanium Cisco                    | virtioa                                                                                                                                                                                                                      |
+| vcenter-             | VMWare vCenter                         | sataa ( 12G )<br>satab ( 1.8G )<br>satac ( 15G )<br>satad ( 25G )<br>satae ( 25G )<br>sataf ( 10G )<br>satag ( 10G )<br>satah ( 15G )<br>satai ( 10G )<br>sataj ( 1.0G )<br>satak ( 10G )<br>satal ( 10G )<br>satam ( 100G ) |
+| veos-                | Arista SW                              | hda, cdrom.iso                                                                                                                                                                                                               |
+| veloedge-            | Velocloud Edge                         | virtioa                                                                                                                                                                                                                      |
+| velogw-              | Velocloud Gateway                      | virtioa                                                                                                                                                                                                                      |
+| veloorch-            | Velocloud Orchestrator                 | virtioa, virtiob, virtioc                                                                                                                                                                                                    |
+| versaana-            | Versa Networks Analayzer               | virtioa                                                                                                                                                                                                                      |
+| versadir-            | Versa Networks Director                | virtioa                                                                                                                                                                                                                      |
+| versavnf-            | Versa Networks FlexVNF Edge            | virtioa                                                                                                                                                                                                                      |
+| vios-                | L3 vIOS Cisco Router                   | virtioa                                                                                                                                                                                                                      |
+| viosl2-              | L2 vIOS Cisco SW                       | virtioa                                                                                                                                                                                                                      |
+| vtbond-              | Viptela vBond                          | virtioa                                                                                                                                                                                                                      |
+| vtedge-              | Viptela vEdge                          | virtioa                                                                                                                                                                                                                      |
+| vtsmart-             | Viptela vSmart                         | virtioa                                                                                                                                                                                                                      |
+| vtmgmt-              | Viptela vManage                        | virtioa, virtiob                                                                                                                                                                                                             |
+| vmx-                 | Juniper vMX router                     | hda                                                                                                                                                                                                                          |
+| vmxvcp-              | Juniper vMX-VCP                        | virtioa, virtiob, virtioc                                                                                                                                                                                                    |
+| vmxvfp-              | Juniper vMX-VFP                        | virtioa                                                                                                                                                                                                                      |
+| vnam-                | Cisco VNAM                             | hda                                                                                                                                                                                                                          |
+| vqfxpfe-             | Juniper vQFX-PFE                       | hda                                                                                                                                                                                                                          |
+| vqfxre-              | Juniper vQFX-RE                        | hda                                                                                                                                                                                                                          |
+| vsrx-                | vSRX 12.1 Juniper FW/router            | virtioa                                                                                                                                                                                                                      |
+| vsrxng-              | vSRX v15.x Juniper FW/router           | virtioa<br>                                                                                                                                                                                                                  |
+| vwaas-               | Cisco WAAS                             | virtioa,virtiob,virtioc                                                                                                                                                                                                      |
+| vwlc-                | vWLC Cisco WiFi controller             | megasasa                                                                                                                                                                                                                     |
+| vyos-                | VYOS                                   | virtioa                                                                                                                                                                                                                      |
+| win-                 | Windows Hosts (Not Server Editions)    | hda or virtioa(using driver)<br>                                                                                                                                                                                             |
+| winserver-           | Windows Server Editions                | hda or virtioa(using driver)                                                                                                                                                                                                 |
+| xrv-                 | XRv Cisco router                       | hda                                                                                                                                                                                                                          |
+| xrv9k-               | XRv 9000 Cisco router<br>              | virtioa                                                                                                                                                                                                                      |
 
-1. Abrir `PrestamosBiblioteca.sln`.
-2. Esperar a que Visual Studio restaure los paquetes NuGet.
-3. Presionar **F5** o el botón **Iniciar**.
-
-## Ejecutar desde terminal
-
-Desde la carpeta del proyecto:
-
-```bash
-dotnet restore
-dotnet run
-```
-
-Al iniciar, se genera automáticamente el archivo:
-
-```text
-PrestamosBiblioteca.sqlite
-```
-
-No es necesario crear manualmente la base de datos.
-
-## Base de datos
-
-Se utilizan tres tablas principales:
-
-- `Lectores`
-- `Libros`
-- `Prestamos`
-
-Los préstamos se relacionan con lectores y libros mediante llaves foráneas. Si se elimina un lector o un libro, sus préstamos asociados se eliminan mediante `ON DELETE CASCADE`.
-
-> Nota: en las fotografías de clase aparece una propuesta con una tabla separada para Autor. En los archivos `.cs` proporcionados para la tarea, `Autor` se utiliza directamente como texto dentro de `Libros`; este proyecto sigue los archivos entregados para mantener compatibilidad.
-
-## Subir a GitHub
-
-Crear un repositorio vacío en GitHub y luego ejecutar dentro de esta carpeta:
-
-```bash
-git init
-git add .
-git commit -m "Proyecto sistema de prestamos de biblioteca"
-git branch -M main
-git remote add origin https://github.com/TU-USUARIO/PrestamosBiblioteca.git
-git push -u origin main
-```
-
-Después se entrega en la plataforma el enlace del repositorio.
+`Source:` [QEMU namings eve-ng docs](https://www.eve-ng.net/index.php/documentation/qemu-image-namings/)
