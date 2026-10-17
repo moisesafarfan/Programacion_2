@@ -1,0 +1,18 @@
+# Compilacion de .NET
+bin/
+obj/
+
+# Visual Studio / VS Code
+.vs/
+.vscode/
+*.user
+*.suo
+
+# Base de datos local creada al ejecutar el programa
+PrestamosBiblioteca.sqlite
+PrestamosBiblioteca.sqlite-shm
+PrestamosBiblioteca.sqlite-wal
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
