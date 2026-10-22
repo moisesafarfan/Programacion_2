@@ -103,18 +103,18 @@ Veterinarios → Mascotas → Citas / Historial Clínico**.
 ## 🖼️ Evidencias
 
 Capturas del sistema en funcionamiento, disponibles en la carpeta
-[`evidencias/`](./evidencias):
+[`Pruebas/`](./Pruebas):
 
 | Evidencia | Descripción |
 |---|---|
-| ![Pantalla principal](./evidencias/Programa.png) | Pantalla principal del sistema |
-| ![Agregar dueño](./evidencias/Agregando-dueno.png) | Registro de un nuevo dueño |
-| ![Agregar mascota](./evidencias/Agregar-mascota.png) | Registro de una nueva mascota |
-| ![Agregar veterinario](./evidencias/Agregar-veterinario.png) | Registro de un nuevo veterinario |
-| ![Agendar cita](./evidencias/Agendar-cita.png) | Agendamiento de una cita |
-| ![Cita atendida](./evidencias/Cita-atendida.png) | Cita marcada como atendida |
-| ![Cita cancelada](./evidencias/Cita-cancelada.png) | Cita marcada como cancelada |
-| ![Historial clínico](./evidencias/historial.png) | Registro del historial clínico de una mascota |
+| ![Pantalla principal](./Pruebas/Programa.png) | Pantalla principal del sistema |
+| ![Agregar dueño](./Pruebas/Agregando-dueno.png) | Registro de un nuevo dueño |
+| ![Agregar mascota](./Pruebas/Agregar-mascota.png) | Registro de una nueva mascota |
+| ![Agregar veterinario](./Pruebas/Agregar-veterinario.png) | Registro de un nuevo veterinario |
+| ![Agendar cita](./Pruebas/Agendar-cita.png) | Agendamiento de una cita |
+| ![Cita atendida](./Pruebas/Cita-atendida.png) | Cita marcada como atendida |
+| ![Cita cancelada](./Pruebas/Cita-cancelada.png) | Cita marcada como cancelada |
+| ![Historial clínico](./Pruebas/historial.png) | Registro del historial clínico de una mascota |
 
 ## 📌 Repositorio
 
